@@ -17,4 +17,4 @@ with open(input_file) as f:
 volume = calc_volume(param_dict['radius'], param_dict['height'])
 
 with dagshub_logger(metrics_path=output_file, should_log_hparams=False) as logger:
-    logger.log_metrics({'volume': volume}, step_num=1)
+    logger.log_metrics({'volume': int(volume)}, step_num=1)
